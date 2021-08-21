@@ -15,13 +15,6 @@ import HandTracker as Ht
 
 
 
-
-
-
-
-
-"""dataset=curr + "Dataset_photo_random/"
-os.chdir(dataset)
 def pose_photo(img):
         detector = poseDetector()
         img = detector.findPose(img)
