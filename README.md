@@ -6,5 +6,5 @@ A small application to track the athlete gesture and motion over time
 **Frameworks**: Mediapipe
 
 <p float="center">
-  <img src="videos/tkdpose.mp4" width="49%" />
+  <img src="application/videos/tkdpose.mp4" width="49%" />
 </p>
