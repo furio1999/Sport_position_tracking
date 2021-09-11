@@ -5,10 +5,19 @@ A small application to track the athlete gesture and motion over time
 
 **Frameworks**: Mediapipe
 
+**Features**: 
+- angle tracking
+- trajectory tracking
+- AI-Trainer
 
 <p float="center">
   <img src="application/videos/tkd_clip.mp4" width="49%" />
   <img src="application/videos/runpose.mp4" width="49%" />
+</p>
+
+angle tracking:
+<p float="center">
+  <img src="application/plots/angle_graph" width="100%" />
 </p>
 
 Clone the repo:
@@ -30,6 +39,6 @@ python sport_pose.py --video [NAME_OF_VIDEO]
 
 activate the desired features
 ```bash
-#perform trajectory tracking
+#perform trajectory tracking (taekwondo video)
 python sport_pose.py --trajectory_tracking
 ```
