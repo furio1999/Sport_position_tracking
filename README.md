@@ -47,6 +47,11 @@ choose the desired body part to track
 python sport_pose.py --body_part [NAME_OF_PART]
 #see the help section
 ```
+choose a single mediapipe joint to track
+```bash
+python sport_pose.py --joint [NUMBER OF JOINT]
+#refers to mediapipe number mapping https://google.github.io/mediapipe/solutions/pose.html
+```
 
 help and explanation on a specific command
 ```bash
