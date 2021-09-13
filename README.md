@@ -47,6 +47,7 @@ activate the desired features
 ```bash
 #perform trajectory tracking (taekwondo video)
 python sport_pose.py --trajectory_tracking
+
 #perform running form evaluation (use 1500_doha.mp4 to reèroduce my results)
 python sport_pose.py --running_evaluation
 ```
