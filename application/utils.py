@@ -21,11 +21,8 @@ def fit_func(x, a, b, c):
     return a*(x ** 2) + b * x + c
 
 
-# megio per saltatori. Per i runners semplice traccio linea, forse meglio con velocita relativa pario a 0. Per i ruuners, stride
-#+ foot angle + leg angle + elbow angle
-#https://problemsolvingwithpython.com/06-Plotting-with-Matplotlib/06.15-Quiver-and-Stream-Plots/
 def trajectory_fit(x, y, height, width, runJudgement, fig):
-    #DONOT PASS figure as a kwarg
+    #DO NOT PASS figure as a kwarg
     # x = [joint for joint in joints[0]]
     # y = [height - joint for joint in joints[1]]
     print("x: ", x)
@@ -91,30 +88,13 @@ class live_tracker():
  def __init__(self, buffer):
      self.buffer=buffer
      self.pts=deque(maxlen=buffer)
-#  ap = argparse.ArgumentParser()
-#  ap.add_argument("-v", "--video",
-# 	help="path to the (optional) video file")
-#  ap.add_argument("-b", "--buffer", type=int, default=64,
-# 	help="max buffer size")
-#  args = vars(ap.parse_args())
- 
-# # if a video path was not supplied, grab the reference
-# # to the webcam
-#  if not args.get("video", False):
-#   vs=VideoStream(src=0).start()
- 
-# # otherwise, grab a reference to the video file
-#  else:
-#   vs = cv2.VideoCapture(args["video"])
 
  def live_track(self, frame, lista):
   buffer=self.buffer
  
   id, xc, yc=lista
   center=(xc,yc)
-		# only proceed if the radius meets a minimum size, 10 default
-  # if frame is None:
-  #         return
+		
      
 
   cv2.circle(frame, center, 5, (0, 0, 255), -1)
