@@ -34,7 +34,7 @@ start the video application:
 python sport_pose.py --camera
 
 # Run on video 
-python sport_pose.py --video [NAME_OF_VIDEO]
+python sport_pose.py --video [PATH_TO_VIDEO] #eg. --video videos/tkd.mp4
 ```
 
 activate the desired features
@@ -42,3 +42,13 @@ activate the desired features
 #perform trajectory tracking (taekwondo video)
 python sport_pose.py --trajectory_tracking
 ```
+choose the desired body part to track
+'''bash
+python sport_pose.py --body_part [NAME_OF_PART]
+#see the help section
+'''
+help and explanation on a specific command
+'''bash
+python sport_pose.py [COMMAND] -help
+#es. --body_part -help
+'''
