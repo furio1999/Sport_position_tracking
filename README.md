@@ -48,7 +48,7 @@ activate the desired features
 #perform trajectory tracking (taekwondo video)
 python sport_pose.py --trajectory_tracking
 
-#perform running form evaluation (use 1500_doha.mp4 to reèroduce my results)
+#perform running form evaluation (use 1500_doha.mp4 to reproduce my results)
 python sport_pose.py --running_evaluation
 ```
 choose the desired body part to track
