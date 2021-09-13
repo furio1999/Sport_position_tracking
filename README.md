@@ -20,6 +20,12 @@ angle tracking:
   <img src="plots/angle_plot_tkd.png" width="30%" />
 </p>
 
+MediaPipe number body mapping:
+<p float="center">
+  <img src="application/Photos/pose_tracking_full_body_landmarks.png" width="50%" />
+</p>
+
+
 Clone the repo:
 ```bash
 git clone https://github.com/furio1999/Sport_position_tracking.git
