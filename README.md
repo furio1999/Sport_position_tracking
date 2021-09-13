@@ -17,7 +17,7 @@ A small application to track the athlete gesture and motion over time
 
 angle tracking:
 <p float="center">
-  <img src="plots/angle_plot_tkd.png" width="100%" />
+  <img src="plots/angle_plot_tkd.png" width="30%" />
 </p>
 
 Clone the repo:
