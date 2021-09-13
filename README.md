@@ -43,12 +43,13 @@ activate the desired features
 python sport_pose.py --trajectory_tracking
 ```
 choose the desired body part to track
-'''bash
+```bash
 python sport_pose.py --body_part [NAME_OF_PART]
 #see the help section
-'''
+```
+
 help and explanation on a specific command
-'''bash
+```bash
 python sport_pose.py [COMMAND] -help
 #es. --body_part -help
-'''
+```
