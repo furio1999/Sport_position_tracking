@@ -11,8 +11,8 @@ A small application to track the athlete gesture and motion over time
 - AI-Trainer
 
 <p float="center">
-  <img src="application/videos/tkd_clip.mp4" width="49%" />
-  <img src="application/videos/runpose.mp4" width="49%" />
+  <img src="application/videos/tkd_clip.gif" width="49%" />
+  <img src="application/videos/run_clip.gif" width="49%" />
 </p>
 
 angle tracking:
