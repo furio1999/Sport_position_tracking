@@ -25,6 +25,11 @@ MediaPipe number body mapping:
   <img src="application/Photos/pose_tracking_full_body_landmarks.png" width="50%" />
 </p>
 
+Install all the libraries of this project:
+```bash
+pip install -r requirements.txt
+```
+
 
 Clone the repo:
 ```bash
