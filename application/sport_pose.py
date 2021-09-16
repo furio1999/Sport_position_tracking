@@ -14,46 +14,6 @@ import matplotlib.pyplot as plt
 import BodyTracker as Bt
 from utils import *
 # %matplotlib inline
-
-#https://stackoverflow.com/questions/51143458/difference-in-output-with-waitkey0-and-waitkey1/51143586 problem: it does not show as continuous feed
-#1) highlight the three points
-#2) graphics to visually show angle
-#3) funzione dove input=parte del corpo, output=highlight landmarks su parte del corpo desiderata
-#save params to run only plots and not everything
-#in teoria, sia da webcam che da video esterno dovrei avere la sequenza di immagini. Perché con yolov4 file no? non è solo cv_imshow il problema. Sembra quasi che 
-#con delle funzioni di supporto javascript riesco ad avere un continuous flow
-#se aggiro il problema cv_imshow mantenendo le funzioni javascript, cambierebbe qualcosa almeno per l'input da webcam? /edit, stesso problema anche con video 
-#senza pose tracker
-#per webcam: funziona usare qualcos'altro invece che cv2_show? tipo PIL?
-#per video salvato: funziona creare un'impalcatura html-js che "aggiri" il ciclo while con dentro cv2_imshow?
-#se faccio cv2_imshow senza fare img=cv2.circle... a cosa è uguale img? resta invariata?
-"""
-le due cose che portano via più tempo: dover aggiornare i salvataggi ed il fatto di non avere continuous stream
-inoltre, sarebbe bello poter modificare il codice mentre l'applicazione gira e poterne vedere gli effetti in real-time, senza dover ri-runnare tutto (a costo di farla inceppare per un comando errato)
-esempio potrei scrivere codice commentato mentre l'applicazione gira, e poi scommentarlo quando sono certo che non dà errori, oppure se devo modificare
-solo una cosa lo posso fare al volo senza conseguenze
-"""
-#"""
-# video_path = "1500_doha.mp4"
-
-# mp4 = open(video_path, "rb").read()
-# data_url = "data:video/mp4;base64," + b64encode(mp4).decode()
-# HTML(f"""
-# <video width=400 controls>
-#       <source src="{data_url}" type="video/mp4">
-# </video>
-# """)
-
-#conversion function from body part to number
-
-###
-
-#disegna funzione che sostituisce arto cercato con arto che lo sovrappone (altrimenti, se i punti cercati sono unici, va bene cosi)
-#detect occluded angles
-#issue: if wait until end of video findangle has trubles; maybe is only a particular config wich cause it, and not the ending point
-#averaginf function for plots, display seconds, milliseconds 
-#the sequence of try except allows to run this code from command line or opening an editor. Alternatively, you can replace
-#the try-excepts statements with if-else to handle None arguments from the argparser
 def main(args):
     
     # filename=args.video
@@ -173,43 +133,11 @@ def main(args):
     #     pickle.dump(angles, f)
         
     target2=target
-    # Bt.plot(lmList, target2, width, height)
-    # an=[]
-    # with open("angle.pickle1", "rb") as f:
-    #     an1=pickle.load(f)
-    # with open("angle.pickle2", "rb") as f:
-    #     an2=pickle.load(f)
-    # with open("angle.pickle3", "rb") as f:
-    #     an3=pickle.load(f)
-    # an.append(an1)
-    # an.append(an2)
-    # an.append(an3)
-    # an=np.array(an)
-    # print(an)
-    # angles=[statistics.mean(an[:][i]) for i in range(0, an.shape[1]-1)]
-    
-    # target_angles=[20, 40, 80, 120, 140, 160]
-    # frequencies=np.zeros(range(len(target_angles)-1))
-    # for ang in angles:
-    #     for i in range(len(target_angles)-1):
-    #         angle=ang[0]
-    #         print("angle: ", angle)
-    #         if angle>target_angles[i] and angle<target_angles[i+1]:
-    #             frequencies[i]+=1
                
     x=range(len(angles)) #frames
-    # x2=range(int(len(x)/fps))
-    # x3=[]
-    # for val in x:
-    #     if (val/fps)==x2[int(val/fps)]:
-    #         x3.append(x2[int(val/fps)])
-    #     else:
-    #         x3.append(0)
     plt.plot(x, angles, linestyle="-", color="blue")
-    # plt.locator_params(axis='x', nbins=len(x2))
     plt.xlabel("frames") #frames change
     plt.ylabel("angle values")
-    # plt.xticks(x, x2)
     plt.show()
     plt.savefig("angle_graph")
     # plt.bar(target_angles, frequencies)
