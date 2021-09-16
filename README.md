@@ -67,6 +67,11 @@ python sport_pose.py --joint [NUMBER OF JOINT]
 #refers to mediapipe number mapping https://google.github.io/mediapipe/solutions/pose.html
 ```
 
+Set up the duration (default value of 45s), otherwise press "q" to stop the application:
+```bash
+python sport_pose.py --duration [SECONDS]
+```
+
 help and explanation on a specific command
 ```bash
 python sport_pose.py [COMMAND] -help
