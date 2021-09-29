@@ -37,7 +37,7 @@ git clone https://github.com/furio1999/Sport_position_tracking.git
 ```
 
 ```bash
-cd application
+cd [PATH-TO-THE-REPO]/application
 ```
 start the video application:
 ```bash
